@@ -50,7 +50,7 @@ $ docker-compose up
 ```
 
 ## Run the app
-To access to api, go to localhost:3000/pokemons
+To access to api, go to localhost:4000/pokemons
 
 ### Methods
 
