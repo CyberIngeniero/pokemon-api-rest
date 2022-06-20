@@ -24,11 +24,11 @@ $ git clone https://github.com/cyberingeniero/pokemon-api-rest.git
 $ cd pokemon-api-rest
 ```
 
-2. Run docker image with mongo database
+2. Run app in docker image with mongo database
 
 ```
-$ cd database
-$ sudo docker run -d -p 21017:27017 --name pokemondb -v $pwd:/data/db mongo
+$ docker-compose build
+$ docker-compose up
 ```
 
 
@@ -39,35 +39,18 @@ $ sudo docker run -d -p 21017:27017 --name pokemondb -v $pwd:/data/db mongo
 This depend on your OS but it should be something like this:
 
 ```
-$ sudo pacman -S docker
+$ sudo pacman -S docker docker-compose
 ```
 
-2. Starting the docker service
+2. Enable and Starting the Docker daemon service
 
 To start Docker daemon with `systemctl star`.
 
 ```
+$ sudo systemctl enable docker
 $ sudo systemctl start docker
 ```
 
-and verify Docker daemon with
-
-```
-$ sudo systemctl status docker
-```
-To enable Docker daemon when you run your OS use `systemctl enable`.
-
-```
-$ sudo systemctl enable docker
-```
-
-3. Get the Mongodb docker image.
-
-To get docker image of mongodb of dockerhub use
-
-```
-$ sudo docker pull mongo
-```
 
 
 
