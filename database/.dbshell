@@ -82,3 +82,8 @@ db.pokemons.find().pretty()
 ls
 use pokemon
 db.pokemons.find().pretty()
+show dbs
+use pokemon
+db.pokemons.find()
+use pokemon
+db.pokemons.find().pretty()

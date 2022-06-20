@@ -14,25 +14,6 @@ This app is a basic API with detailed information of each Pokemon in the databas
 - Mongodb is a Docker Image storage in dockerhub.
 
 
-## Setup
-1. Clone the repository in your computer.
-
-To clone the repository in your computer, you can use the following command:
-
-```
-$ git clone https://github.com/cyberingeniero/pokemon-api-rest.git
-$ cd pokemon-api-rest
-```
-
-2. Run app in docker image with mongo database
-
-```
-$ docker-compose build
-$ docker-compose up
-```
-
-
-
 ### Install the dependencies.
 1. Install Dockers.
 
@@ -51,8 +32,35 @@ $ sudo systemctl enable docker
 $ sudo systemctl start docker
 ```
 
+## Setup
+1. Clone the repository in your computer.
 
+To clone the repository in your computer, you can use the following command:
 
+```
+$ git clone https://github.com/cyberingeniero/pokemon-api-rest.git
+$ cd pokemon-api-rest
+```
+
+2. Run app in docker image with mongo database
+
+```
+$ docker-compose build
+$ docker-compose up
+```
+
+## Run the app
+To access to api, go to localhost:3000/pokemons
+
+### Methods
+
+For now there is only one method:
+
+```
+/pokemons/all
+/pokemons/by-name/{name}
+/pokemons/by-type/{type}
+```
 
 
 

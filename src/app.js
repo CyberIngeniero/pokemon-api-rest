@@ -1,17 +1,18 @@
+require('dotenv').config();
 const express = require('express');
-const http = require('http');
 const mongoose = require('mongoose');
-const bodyParser      = require("body-parser");
-const methodOverride  = require("method-override");
 const mongo = require("mongodb").MongoClient;
+const http = require('http');
+const methodOverride  = require("method-override");
+
+const bodyParser = require("body-parser");
+const dbConnect = require('../config/mongo');
 
 const app = express();
 const router = express.Router();
 const server = http.createServer(app);
 
 const PORT = process.env.PORT || 3000;
-const DB_URI = 'mongodb://pokemondb:27017/pokemon';
-//const DB_URI = 'mongodb://172.17.0.2:27017/pokemon';
 
 
 // middlewares
@@ -19,26 +20,26 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(methodOverride());
 app.use(express.json());
-app.set('port', PORT);
-app.set('json spaces', 2);
+
+const DB_URI = process.env.DB_URI;
 
 
-// connection to DB
-mongoose.connect(DB_URI, function (err, res) {
-    if(err) {
+mongoose.connect(DB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+},
+(err, res) => {
+    if (err) {
         console.log('ERROR: connecting to Database. ' + err);
     } else {
-        console.log('Connected to Database');
         db = mongoose.connection;
-        pokemons = db.collection("pokemons");
+        pokemons = db.collection('pokemons');
+        console.log('Connected to Database');
     }
 });
 
 
-// Example Route
-app.get('/', function(req, res) {
-    res.send("Hello world!");
-});
+//app.use('/pokemons', require('../routes/routes'));
 
 
 //show all pokemons
