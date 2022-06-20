@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  node_api:
+    container_name: pokemon_api
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4000:3000"
+    links:
+      - mongo
+    volumes:
+      - .:/usr/src/app
+  mongo:
+    container_name: pokemondb
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./database:/data/db

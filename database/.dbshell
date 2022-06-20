@@ -1,0 +1,84 @@
+show dbs
+mongoimport -d pokemon -c pokemons --jsonArray < /tmp/pokemon.json
+mongoimport -d pokemon -c pokemons --jsonArray < /tmp/pokemon.json
+ls
+show dbs
+use pokemon
+mongoimport -d pokemon -c pokemons --jsonArray < /tmp/pokemon.json
+show dbs
+use pokemon_db
+show collection
+show collections
+db.pokemon.find().pretty()
+db.pokemons.find().pretty()
+show dbs
+use pokemon_db
+show collections
+db.pokemons.find().pretty()
+use pokemon_db
+use pokemons
+find()
+db.pokemons.count()
+db.pokemons.count(documents)
+db.pokemons.count(1)
+use pokemon_db
+db.pokemons.find()
+show dbs
+use pokemon_db
+db.dropDatabase()
+show dbs
+use pokemon
+db.pokemons.find().pretty()
+show dbs
+use pokemon
+db.pokemons.explain()
+db.pokemons.explain().find()
+use pokemons
+db.pokemons.explain()
+db.pokemons.find().pretty()
+db.pokemmons.find()
+db.pokemons.find()
+use pokemondb
+use pokemons
+db.pokemons.find()
+show dbs
+use pokemon
+show pokemons
+show collections
+use pokemons
+db.pokemons.countDocuments()
+db.pokemons.count()
+use pokemon
+use pokemons
+db.pokemons.count()
+use pokemon
+use pokemons
+db.pokemons.count()
+db.pokemons.drop()
+clear
+use pokemon
+show collections
+db.pokemons.drop()
+show collections
+use pokemon
+show collections
+use pokemons
+coun()
+pokemon.pokemons.count()
+db.pokemons.coun()
+db.pokemons.count()
+db.pokemons.find().pretty()
+show dbs
+use pokemon
+use pokemons
+db.pokemons.count()
+show collections
+use pokemon
+db.pokemons.Distinct("name")
+db.pokemons.distinct("name")
+db.pokemons.find().pretty()
+db.pokemons.distinct("name")
+db.pokemons.find().pretty()
+ls
+use pokemon
+db.pokemons.find().pretty()

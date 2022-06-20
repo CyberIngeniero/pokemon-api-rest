@@ -2,7 +2,11 @@
     "name": "pokemon-api-rest",
     "version": "1.0.0",
     "description": "",
-    "main": "",
+    "main": "app.js",
+    "scripts": {
+        "start": "node src/app.js",
+        "dev": "nodemon src/app.js"
+    },
     "dependencies": {
         "body-parser": "*",
         "express": "^4.18.1",
